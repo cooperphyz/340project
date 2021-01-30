@@ -1,0 +1,109 @@
+/*Navbar Styling */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.navbarlist {
+  float: left;
+}
+
+.navbarlist a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbarlist a:hover {
+  background-color: #111;
+}
+
+/*Header Banner Styling */
+.header {
+  padding: 50px 20px 20px;
+  text-align: center;
+  background: #f39821;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/04/02/653069/650493aa27051a03c434d4523c6aaad0-1000.jpg");
+  background-size: 100% auto;
+}
+
+/*Table Styling */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.information {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #f39821;
+}
+
+/* Buttons */
+.add {
+  background-color: #f39821; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.add {
+  transition-duration: 0.4s;
+}
+
+.add:hover {
+  background-color: #535353;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+.add:active {
+  background-color: #535353;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.spacer {
+  padding: 20px;
+}
