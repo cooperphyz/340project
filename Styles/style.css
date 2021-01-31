@@ -41,54 +41,73 @@
 body {
   overflow: hidden;
   height: 100%;
-  margin: 0;
   background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/04/02/653069/650493aa27051a03c434d4523c6aaad0-1000.jpg");
   background-size: 100% auto;
 }
 
 /*Table Styling */
-table {
-  font-family: arial, sans-serif;
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
   border-collapse: collapse;
-  width: 80%;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 300px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.information {
-  margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  margin-left: auto;
 }
 
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-tr:nth-child(odd) {
+.content-table thead tr {
   background-color: #f39821;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:nth-of-type(odd) {
+  background-color: #e7e7e7;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #f39821;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }
 
 /* Buttons */
 .add {
-  background-color: #f39821; /* Green */
+  background-color: #fffcf9; /* Green */
   border: none;
-  color: white;
+  color: #f39821;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  vertical-align: bottom;
 }
 .add {
   transition-duration: 0.4s;
