@@ -62,6 +62,8 @@ body {
 
 .content-table {
   border-collapse: collapse;
+  height: 50px;
+  overflow-x: auto;
   margin: 25px 0;
   font-size: 0.9em;
   min-width: 300px;
