@@ -48,6 +48,7 @@ body {
 .information {
   overflow-y: auto;
   overflow: auto;
+  display: flex;
 }
 /*Table and Form Styling */
 #myInput {
