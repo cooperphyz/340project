@@ -44,8 +44,12 @@ body {
   background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/04/02/653069/650493aa27051a03c434d4523c6aaad0-1000.jpg");
   background-size: 100% auto;
 }
-
-/*Table Styling */
+/*Table Div Container*/
+.information {
+  overflow-y: auto;
+  overflow: auto;
+}
+/*Table and Form Styling */
 #myInput {
   background-image: url("https://i.ibb.co/FK3DSKN/search.png"); /* Add a search icon to input */
   background-position: 10px 12px; /* Position the search icon */
@@ -56,15 +60,35 @@ body {
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
 }
+
 * {
   font-family: sans-serif; /* Change your font family */
 }
+/* New Form Styling */
+form {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  background-size: 19px;
+  width: 60.5%; /* Full-width */
+  text-align: center;
+  font-size: 16px; /* Increase font-size */
+  padding: 0px 0px 0px 0px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+}
 
-.content-table {
+.input {
+  width: 10%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 10px 25px 10px 5px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+}
+
+.content-table,
+form {
   border-collapse: collapse;
   height: 50px;
   overflow-x: auto;
-  margin: 25px 0;
+  margin: 0 0;
   font-size: 0.9em;
   min-width: 300px;
   border-radius: 5px 5px 0 0;
@@ -74,7 +98,8 @@ body {
   margin-left: auto;
 }
 
-.content-table thead tr {
+.content-table thead tr,
+form {
   background-color: #f39821;
   color: #ffffff;
   text-align: left;
@@ -82,11 +107,13 @@ body {
 }
 
 .content-table th,
-.content-table td {
-  padding: 12px 15px;
+.content-table td,
+form {
+  padding: 5px 15px;
 }
 
-.content-table tbody tr {
+.content-table tbody tr,
+form {
   border-bottom: 1px solid #dddddd;
 }
 
@@ -108,7 +135,8 @@ body {
 }
 
 /* Buttons */
-.add {
+.add,
+.submit {
   background-color: #fffcf9; /* Green */
   border: none;
   color: #f39821;
@@ -121,16 +149,19 @@ body {
   display: inline-block;
   vertical-align: bottom;
 }
-.add {
+.add,
+.submit {
   transition-duration: 0.4s;
 }
 
-.add:hover {
+.add:hover,
+.submit:hover {
   background-color: #535353;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: white;
 }
-.add:active {
+.add:active,
+.submit:active {
   background-color: #535353;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
