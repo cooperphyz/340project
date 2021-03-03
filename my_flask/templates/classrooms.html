@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Classrooms</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <ul class ="navbar">
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/';" >Home</button>
+    <!-- <li class ="navbarlist"><a href="Teachers/index.html">Teachers</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/teachers';" >Teachers</button>
+    <!-- <li class ="navbarlist"><a href="Students/index.html">Students</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/students';" >Students</button>
+    <!-- <li class ="navbarlist"><a href="Courses/index.html">Courses</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/courses';" >Courses</button>
+    <!-- <li class ="navbarlist"><a href="Classrooms/index.html">Classrooms</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/classrooms';" >Classrooms</button>
+    </ul>
+
+    <!-- Top Banner -->
+    <div class="header">
+    <h1>Classroom List</h1>
+    </div>
+
+    <!-- Table -->
+    <br>
+    <!-- Add Entry -->
+    <div>
+      <form action="/classrooms" METHOD="POST" class="form">
+        <label for="RoomNumber">Room Number</label>
+        <input type="number" id="rnumber" name="roomnumber" placeholder="Room Number" class = "input" required/>
+
+        <label for="building">Building</label>
+        <input type="text" id="building" name="building" placeholder="Building" class = "input" required/>
+    
+        <label for="Capacity">Capacity</label>
+        <input type="number" id="Capacity" name="capacity" placeholder="Capacity" class = "input" required/>
+
+        <input type="submit" value="Add Classroom" class="submit">
+      </form>
+    </div>
+  <div class = "information">
+
+  <table class="content-table" id="myTable">
+  <thead>
+  <tr>
+    <th>Room Number</th>
+    <th>Building</th>
+    <th>Capacity</th>
+    <th colspan="2"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search table..." title="Type in a name"></th>
+  </tr>
+  {% for row in rows %}
+<tr>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[4]}}</td>
+    <td>{{row[5]}}</td>
+</tr>
+{% endfor %}
+</tbody>
+  </table>
+</div>
+
+  <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+</body>
+</html>

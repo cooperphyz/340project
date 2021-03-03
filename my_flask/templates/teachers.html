@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Teachers</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <ul class ="navbar">
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/';" >Home</button>
+    <!-- <li class ="navbarlist"><a href="Teachers/index.html">Teachers</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/teachers';" >Teachers</button>
+    <!-- <li class ="navbarlist"><a href="Students/index.html">Students</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/students';" >Students</button>
+    <!-- <li class ="navbarlist"><a href="Courses/index.html">Courses</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/courses';" >Courses</button>
+    <!-- <li class ="navbarlist"><a href="Classrooms/index.html">Classrooms</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/classrooms';" >Classrooms</button>
+    </ul>
+
+    <!-- Top Banner -->
+    <div class="header">
+    <h1>Teachers List</h1>
+    </div>
+    <br>
+    <!-- Add Entry -->
+    <div>
+      <form action="/teachers" METHOD="POST" class="form">
+        <label for="teacherid">TeacherID</label>
+        <input type="number" id="teacherid" name="teacherid" placeholder="Teacher ID" class = "input" required/>
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="First Name" class = "input" required/>
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Last Name" class = "input" required/>
+    
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email" class = "input" required/>
+
+        <input type="submit" value="Add Teacher" class="submit">
+      </form>
+    </div>
+
+    <!-- Table -->  
+  <div class = "information">
+
+  <table class="content-table" id="myTable">
+  <thead>
+  <tr>
+    <th>teacherID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th colspan="3"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search table..." title="Type in a name"></th>
+  </tr>
+{% for row in rows %}
+<tr>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[4]}}</td>
+    <td>{{row[5]}}</td>
+</tr>
+{% endfor %}
+</tbody>
+  </table>
+</div>
+
+  <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/*Navbar Styling */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.navbarlist {
+  float: left;
+}
+
+.navbarlist a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbarlist a:hover {
+  background-color: #111;
+}
+
+/*Header Banner Styling */
+.header {
+  padding: 50px 20px 1px 0px;
+  text-align: center;
+  background: #f39821;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2015/04/02/653069/650493aa27051a03c434d4523c6aaad0-1000.jpg");
+  background-size: 100% auto;
+}
+/*Table Div Container*/
+.information {
+  overflow-y: auto;
+  overflow: auto;
+  display: flex;
+}
+/*Table and Form Styling */
+#myInput {
+  background-image: url("https://i.ibb.co/FK3DSKN/search.png"); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  background-size: 19px;
+  width: 50%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+}
+
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+/* New Form Styling */
+form {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  background-size: 19px;
+  width: 63.5%; /* Full-width */
+  text-align: center;
+  font-size: 16px; /* Increase font-size */
+  padding: 0px 0px 0px 0px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+}
+
+.input {
+  width: 10%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 10px 25px 10px 5px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+}
+
+.content-table,
+form {
+  border-collapse: collapse;
+  height: 50px;
+  overflow-x: auto;
+  margin: 0 0;
+  font-size: 0.9em;
+  min-width: 300px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content-table thead tr,
+form {
+  background-color: #f39821;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td,
+form {
+  padding: 5px 15px;
+}
+
+.content-table tbody tr,
+form {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:nth-of-type(odd) {
+  background-color: #e7e7e7;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #f39821;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+/* Buttons */
+.add,
+.submit {
+  background-color: #fffcf9; /* Green */
+  border: none;
+  color: #f39821;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  vertical-align: bottom;
+}
+.add,
+.submit {
+  transition-duration: 0.4s;
+}
+
+.add:hover,
+.submit:hover {
+  background-color: #535353;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+.add:active,
+.submit:active {
+  background-color: #535353;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.spacer {
+  padding: 20px;
+}

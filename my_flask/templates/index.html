@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <ul class ="navbar">
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/';" >Home</button>
+    <!-- <li class ="navbarlist"><a href="Teachers/index.html">Teachers</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/teachers';" >Teachers</button>
+    <!-- <li class ="navbarlist"><a href="Students/index.html">Students</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/students';" >Students</button>
+    <!-- <li class ="navbarlist"><a href="Courses/index.html">Courses</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/courses';" >Courses</button>
+    <!-- <li class ="navbarlist"><a href="Classrooms/index.html">Classrooms</a></li> -->
+    <button type="submit" class="btn btn-outline-secondary mb-2 myButton" id="myButton" onclick="window.location.href='/classrooms';" >Classrooms</button>
+    </ul>
+
+    <!-- Top Banner -->
+    <div class="header">
+    <h1>Homepage</h1>
+    <p>Feel free to browse the database information using the navbar above</p>
+    </div>
+
+    <img href=""></img>
+
+  <script src="{{url_for('static', filename='javascript/script.js')}}"></script>
+</body>
+</html>
